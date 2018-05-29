@@ -58,6 +58,7 @@
 .talkBox{
   width: 100%;
   background: #fff url('../assets/bgtexture50_50.jpg') repeat;
+  background-size: 100px 100px;
   margin-bottom: 15px;
   padding: 25px 20px;
   h3{

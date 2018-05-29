@@ -6,19 +6,15 @@
       <a href="./lee.html">李明玉</a>
       <a href="./pong.html">澎恰恰</a>
     </Headbar>
-    <Cover :bg="CoverImg" :bgweb="CoverImgPc"></Cover>
+    <Cover :bg="CoverImg" :bgweb="CoverImgPc"
+           position='bottom' title="汪建民照顧失智母親 " subtitle="最害怕妹妹說「我放棄了...」"></Cover>
     <Content>
-      <h1>汪建民<br/>照顧82歲失智母親 最怕妹妹說「我放棄了...」</h1>
       <p><br></p>
       <p>前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言。</p>
       <p><br></p>
       <Share href="http://nmdap.udn.com.tw/orange-project/"></Share>
       <p><br></p>
       <Youtube src="https://www.youtube.com/embed/uauzw00I0wY"></Youtube>
-      <p><br></p>
-      <p>以下為採訪內容摘要：</p>
-      <p>我最害怕接到的電話，是妹妹打來告訴我：「哥，我放棄了…」</p>
-      <p>兩年半前，媽媽在家裡中風被妹妹發現，她這一倒下，開始了我和妹妹這場照顧馬拉松。</p>
       <p><br></p>
       <h3>罹癌、中風、失智 接踵而來</h3>
       <p><br></p>
@@ -62,7 +58,7 @@
       <p><br></p>
       <h3>#我也是照顧者</h3>
       <CareProfile>
-        <p><b>汪建民 </b></p>
+        <p><b>汪建民</b></p>
         <p>藝人（50歲）</p>
         <p>被照顧者：媽媽（82歲）</p>
         <hr>

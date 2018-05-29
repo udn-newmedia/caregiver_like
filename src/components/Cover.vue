@@ -110,6 +110,7 @@ export default {
     }
     #sub-title{
         font-size: 55px;
+        text-shadow: 0 0px 9px rgba(48,48,48,1);
         color: #FFFFFF;
     }
 

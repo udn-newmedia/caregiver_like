@@ -40,6 +40,8 @@ module.exports = {
     // Template for index.html
     index: path.resolve(__dirname, '../dist/index.html'),
     wung: path.resolve(__dirname, '../dist/wung.html'),
+    lee: path.resolve(__dirname, '../dist/lee.html'),
+    pong: path.resolve(__dirname, '../dist/pong.html'),
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',

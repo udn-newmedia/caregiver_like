@@ -5,12 +5,12 @@
     <Typing></Typing>
     <Cover :bg='img.CoverBg' :bgweb='img.CoverBg_pc' :useArrow="false">
       <img class="warm" :src="srcRWD(img.warm_1, img.warm_1_pc)" style="z-index: 10;">
-      <img class="warm" :src="srcRWD(img.warm_2, img.warm_2_pc)" style="animation-dealy: 333ms">
-      <img class="warm" :src="srcRWD(img.warm_3, img.warm_3_pc)" style="z-index: 6;animation-delay: 777ms;">
-      <img class="warm" :src="srcRWD(img.warm_4, null)" style="animation-delay: 555ms">
+      <img class="warm" :src="srcRWD(img.warm_2, img.warm_2_pc)" style="animation-dealy: 485ms">
+      <img class="warm" :src="srcRWD(img.warm_3, img.warm_3_pc)" style="z-index: 6;animation-delay: 666ms;">
+      <img class="warm" :src="srcRWD(img.warm_4, null)" style="animation-delay: 999ms">
       <h1 class="TheTitle">照顧者最不想聽的一句話</h1>
     </Cover>
-    <Content backgroundColor="#7e6b5a" color="#ffffff">
+    <Content :background-color="srcRWD(mobBgColor, pcBgColor)" :color="srcRWD(mobFontColor, pcFontColor)">
       <Share href="http://nmdap.udn.com.tw/orange-project/"></Share>
       <p><br></p>
       <p>「把父母送到安養院就是不孝？」長久以來，台灣的照顧者陷於孝順就是「親力親為」的傳統照顧迷思，再加上擔心周遭親友的閒言閒語，讓照顧者的負擔更沉重。</p>
@@ -18,6 +18,14 @@
       <p>照顧者求助心理諮商的案例中，一半以上的照顧者的心理困擾和溝通身旁家人有關。有時候旁人的一句話，可能成為壓垮照顧者的最後一根稻草。</p>
       <p><br></p>
       <p>聯合報系願景工程團隊採訪了四位照顧者的故事，包括金鐘獎主持人澎恰恰、資深藝人白冰冰、演員汪建民，以及玄奘大學社工系助理教授李明玉，在照顧家人的路上，他們最擔心的不是燒光積蓄；即使有錢，也有解決不了的難題，也有不為人知的照顧辛酸...</p>
+    </Content>
+    <Typing_3></Typing_3>
+    <Content background-color="#fff">
+      <p>台灣有百萬名的家庭照顧者，時常獨自面對龐大的心理壓力，若身旁又有親友冷嘲熱諷、酸言酸語，真的會令照顧者十分抓狂！</p>
+      <p><br></p>
+      <p><b>特搜最令照顧者火大的7句話，哪一句話讓你最有感呢？</b></p>
+      <p><br></p>
+      <Vote></Vote>
     </Content>
     <Typing_2></Typing_2>
     <Cover :bg="img.coverWung" :bgweb="img.coverWung_pc" :useArrow="false" menu-text="汪建民">
@@ -28,7 +36,7 @@
         </div>
       </div>
     </Cover>
-    <Content background-color="#e5e5e5" color="#000">
+    <Content :background-color="srcRWD(mobBgColor, pcBgColor)" :color="srcRWD(mobFontColor, pcFontColor)">
       <p>媽媽兩年半前因為中風住院，當時的看護阿姨發現，媽媽無法控制自己的大小便，好幾次尿布濕了都不自知，一檢查，確診是輕度失智。媽媽二次住院40多天，我要拍戲，照顧的重擔幾乎都落在妹妹身上。出院後怎麼辦？我們討論了兩個小時，認為只有一條路，把媽媽送到安養機構。</p>
       <p><br></p>
       <p>發病後短短一年，溫柔賢淑的媽媽變得暴躁、髒話連篇，曾看著我對安養中心的人說：「我弟弟來看我了！」還有一次，媽媽像是中邪一樣盯著我，眼神好可怕，甚至像殺人犯。我忍不住懷疑，這真是我媽媽？她到底是誰？被媽媽忘記這件事，我沒有準備，但每天都在接受。</p>
@@ -47,7 +55,7 @@
         </div>
       </div>
     </Cover>
-    <Content background-color="#e5e5e5" color="#000">
+    <Content :background-color="srcRWD(mobBgColor, pcBgColor)" :color="srcRWD(mobFontColor, pcFontColor)">
       <p>面雜看不花的是天，現加自一快的變能同的夫體政求門致：也微不心常如他公史言技日說西精黨他失……家風家公心他文流銀課？即灣公醫明，入外答力件口老海分。著走經果適。會了聲們的排機真出建與起。入了美是，葉想把錢。</p>
       <p><br></p>
       <p>量配什現滿物後超。度結道就自畫民力。力原常十，生戲種來該行為文什，術能身金書！決到但舞黨他，要黃許這，再存成人他？突它國可！同石不師大；建命如為量舉起反長等在食早所演下質活體負成。是一應兒怕生去行思照不或話人，種熱考型。</p>
@@ -70,7 +78,7 @@
         </div>
       </div>
     </Cover>
-    <Content background-color="#e5e5e5" color="#000">
+    <Content :background-color="srcRWD(mobBgColor, pcBgColor)" :color="srcRWD(mobFontColor, pcFontColor)">
       <p>消了度時境市！面人開，下學升業所禮的國團人年外林人費：的上快？技達落球似到火非然小電長帶能同……畫社子者人應此，會兒電深上立方內，可風在傷大生？種照難開，年在醫正看自調雨電實灣教。</p>
       <p><br></p>
       <p>花間此下一隨去非人，要一球共來作顯表未查或的情人接知好中她，受人的家防裡面心點日一文像就標我得中今具上司無的新。國集全開內目式世沒在的下難心兒面速。種臺手裡師人樂金：教接是著中我……人內來父下無度。意的燈親過始策家看天育。方什度工推再不相新生木書黃造但能動、條被車長老下下覺感：的唱我作者再小上中緊。德四這找的上臺加部，出指科，件童石結園只散合一候事任，消牛開物數市過客響。根招沒；苦要畫步生、倒公同著早有開認工非，麼小快運！</p>
@@ -81,9 +89,8 @@
         <a href="./lee.html" class="readArticle">閱讀全文</a>
       </div>
     </Content>
-    <SectionFixedBg :bg="img.coverSection" :bgweb="img.coverSection_pc" text="你可以對照顧者這麼說
-" menu-text="可以這麼說"></SectionFixedBg>
-    <Content background-color="#e5e5e5" color="#000">
+    <SectionFixedBg :bg="img.coverSection" :bgweb="img.coverSection_pc" text="你可以對照顧者這麼說" menu-text="可以這麼說"></SectionFixedBg>
+    <Content :background-color="srcRWD(mobBgColor, pcBgColor)" :color="srcRWD(mobFontColor, pcFontColor)">
       <p>只要家人一句貼心、正面的話語，就可以給予照顧者憂鬱無助的心情很大的力量和幫助！專家建議你可以常說以下幾句話。</p>
       <p><br></p>
       <TalkSection></TalkSection>
@@ -134,6 +141,7 @@ import Relate from './components/Relate'
 import TalkSection from './components/TalkSection'
 import Typing from './components/typing'
 import Typing_2 from './components/typing_2'
+import Typing_3 from './components/typing_3'
 import Vote from './components/vote.vue'
 
 import srcRWD from './mixin/srcRWD.js'
@@ -179,6 +187,7 @@ export default {
     TalkSection,
     Typing,
     Typing_2,
+    Typing_3,
     Vote
   },
   data() {
@@ -201,7 +210,11 @@ export default {
         coverLee_pc: imgCoverLee_pc,
         coverSection: imgCoverSection,
         coverSection_pc: imgCoverSeciton_pc
-      }
+      },
+      mobBgColor: '#7e6b5a',
+      pcBgColor: '#fff',
+      mobFontColor: '#fff',
+      pcFontColor: '#000'
     }
   },
 }
@@ -236,7 +249,7 @@ export default {
   z-index: auto;
   width: 100%;
   height: auto;
-  animation: poke 1111ms ease-in-out alternate infinite ;
+  animation: poke 1648ms ease-in-out infinite ;
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     top: -15vh;
   }
@@ -265,19 +278,33 @@ export default {
 .readArticle{
   display: inline-block;
   padding: 5px 10px;
-  border: 2px solid #000;
-  color: #000;
+  border: 2px solid #fff;
+  color: #fff;
   text-align: center;
   font-weight: bold;
   text-decoration: none;
   border-radius: 17.5px;
+  @media screen and (min-width: 1024px) {
+    color: #000;
+    border: 2px solid #000;
+  }
+  &:hover{
+    text-decoration: none;
+    color: #000;
+  }
 }
 @keyframes poke {
   from{
     transform: translate(0, 0);
+    opacity: 0;
+  }
+  60%{
+    transform: translate(0, 20px);
+    opacity: 1;
   }
   to{
     transform: translate(0, 20px);
+    opacity: 0;
   }
 }
 </style>

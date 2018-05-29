@@ -13,7 +13,7 @@
 <style lang="scss" scoped>
 .careProfile{
   background-color: #dcdcdc;
-  padding: 15px 0;
+  padding: 15px 10px;
   @media screen and (min-width: 1024px) {
     padding:  35px 15%;
   }
