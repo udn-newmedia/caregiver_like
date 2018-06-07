@@ -1,7 +1,7 @@
 <template>
     <header id="head-bar" :style="{top: top+'px',backgroundColor: setBackgroundColor}">
       <div id="icon">
-          <a href="./index.html"><i class="udn-icon udn-icon-logo" :style="{color: setColor}"></i></a>
+          <a href="#"><i class="udn-icon udn-icon-logo" :style="{color: setColor}"></i></a>
       </div>
       <div id="hbutton-contain" :class="{transformToNone: isOpen}" :style="{transform: menuSlideDirection, backgroundColor:setBackgroundColor}">
 	      <div class="scrollTo-Btn" v-for='title in getTitle' :style="{color: setColor, backgroundColor: setBackgroundColor}  "@click="handleScrollTo(title.title)">{{title.title}}</div>
@@ -9,7 +9,7 @@
 	      	<slot></slot>
 	      </div>
       </div>
-      <div id="hbutton" class="hidden-lg">
+      <div v-if="useMenu" id="hbutton" class="hidden-lg">
           <div class="nav-icon" :class="{open: isOpen}"
               @click="handleBurger()"
           >
@@ -29,7 +29,7 @@ import Utils from 'udn-newmedia-utils'
 
 export default {
     name: 'HeadBar',
-    props: ['background-color', 'MenuSlideFrom', 'color', 'vision', 'linkBackgroundColor', 'linkColor', 'noLogo'],
+    props: ['background-color', 'MenuSlideFrom', 'color', 'vision', 'linkBackgroundColor', 'linkColor', 'noLogo', 'noMenu'],
     data: function() {
         return {
             top: 0,
@@ -39,6 +39,13 @@ export default {
         }
     },
     computed: {
+        useMenu () {
+            if(this.noMenu === 'true') {
+                return false
+            } else {
+                return true
+            }
+        },
         setLinkBackgroundColor: function() {
             if(this.linkBackgroundColor){
                 return this.linkBackgroundColor
@@ -152,7 +159,6 @@ export default {
                     break;
             }
         }
-
     },
     mounted: function() {
         var self = this

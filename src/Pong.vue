@@ -3,16 +3,29 @@
     <Indicator></Indicator>
     <Headbar MenuSlideFrom='right'>
       <a href="./wung.html">汪建民</a>
-      <a href="./lee.html">李明玉</a>
       <a href="./pong.html"><b>澎恰恰</b></a>
+      <a href="./lee.html">李明玉</a>
     </Headbar>
-    <Cover :bg="CoverImg" :bgweb="CoverImgPc" position='bottom' title="澎恰恰回憶失智母親 " subtitle="遺憾來不及伴老"></Cover>
+    <Cover :bg="CoverImg" :bgweb="CoverImgPc" fontColor="#444" style="background-position: center top;"
+            position='bottom' title="澎恰恰談照顧母親辛酸" subtitle="「最大的遺憾是來不及陪伴」" useArrow="true" arrowColor="#444"></Cover>
     <Content>
-      <p>前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言。</p>
+      <p>「看著媽媽火化的那一刻，我才發覺還有很多話來不及跟她說。」回憶目送母親進火葬場的場景，主持人澎恰恰眼底流露哀傷。澎恰恰的母親86歲那年失智，後來因腦積水手術後遺症，從此再沒醒來，沉睡了兩年多之後過世，讓澎恰恰連再見都來不及說。</p>
       <p><br></p>
-      <Share href="http://nmdap.udn.com.tw/orange-project/"></Share>
+      <p>出道30年，澎恰恰常在螢光幕前扮演丑角型的甘草人物，把歡笑帶給觀眾。但台下的他，提到母親，總是有說不盡的遺憾。他說，照顧者最大的辛酸是來不及盡孝，「等我有時間陪伴媽媽，她卻不記得我了。」眼前這位縱橫電視圈數十年的綜藝大哥，此刻也只不過是一個來不及孝順母親的平凡兒子。</p>
+      <p><br></p>
+      <Share href="https://udn.com/upf/newmedia/2018_data/caregiver_like/pong.html"></Share>
       <p><br></p>
       <Youtube src="https://www.youtube.com/embed/uauzw00I0wY"></Youtube>
+      <p><br></p>
+      <p>以下為採訪內容摘要：</p>
+      <p><br></p>
+      <p>我最大的心願是要在老家蓋一棟很大的房子，讓媽媽、兄姐全家人都住在一起，但心願還沒達成，媽媽就走了，這是我心頭最大的遺憾。</p>
+      <p><br></p>
+      <p>我29歲出道，至今30年。兄姐都捧鐵飯碗，唯獨我執意到台北闖演藝圈，媽媽曾經非常反對，但我知道她後來看到電視螢幕裡的我，即使嬉笑怒罵、裝瘋扮醜，我還是她心中最大的驕傲。</p>
+      <p><br></p>
+      <p>自從在演藝圈打拚，身為藝人，時間無法留給家人，每年只休一天假，也只有除夕會回家和家人一起圍爐，隔天又匆匆趕去錄影。</p>
+      <p><br></p>
+      <p>但我每天晚上7點準時打電話給媽媽，一定要和她講到話，後來媽媽年紀大了，配合她的作息，把打電話時間提前到傍晚5點，這個習慣維持了25年，直到媽媽失智。</p>
       <p><br></p>
       <h3>母親記憶 停留在少女時代</h3>
       <p><br></p>
@@ -69,7 +82,7 @@
       </CareProfile>
     </Content>
     <Content background-color="#fff">
-      <Share href="http://nmdap.udn.com.tw/orange-project/"></Share>
+      <Share href="https://udn.com/upf/newmedia/2018_data/caregiver_like/pong.html"></Share>
       <Logo>
         <div class="logo">
           <a href="https://vision.udn.com/" target="_blank"><img src="https://udn.com/upf/newmedia/img/logo_udnhope2.jpg"></a>
@@ -92,7 +105,8 @@
         href3="https://p.udn.com.tw/upf/newmedia/2016_data/20161003_quicksand_middle_age/index.html" img3="./static/web/bg_wang.jpg" text3="兒少發展帳戶推動3個月 申請率25%"
         href4="https://p.udn.com.tw/upf/newmedia/2016_data/20161003_quicksand_middle_age/index.html" img4="./static/web/bg_wang.jpg" text4="流沙中年 棄6萬月新顧爸媽，我在貧窮線下度日"
       ></Relate>
-      <FbComment href="http://nmdap.udn.com.tw/orange-project/"></FbComment>
+      <p><br></p>
+      <FbComment href="https://udn.com/upf/newmedia/2018_data/caregiver_like/pong.html"></FbComment>
     </Content>
     <Foot background-color="#FFFFFF"></Foot>
   </div>
@@ -173,6 +187,10 @@ export default {
   word-wrap: break-word;
   text-align: justify;
   height: 100vh;
+  padding-top: 46px;
+  @media screen and (min-width: 1024px) {
+    padding-top: 50px;
+  }    
 }
 .cusColumn{
   @media screen and (min-width: 1024px) {

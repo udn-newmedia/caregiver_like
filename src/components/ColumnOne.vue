@@ -1,7 +1,10 @@
 <template>
   <div class="image-contain">
     <img :src="imgRWD1()">
-    <div class="img-say"><div v-html="imgsay"></div></div>
+    <div class="img-say">
+      <div v-html="imgsay"></div>
+    </div>
+    <slot></slot>
   </div>
 </template>
 
@@ -28,6 +31,9 @@ export default {
 </script>
 
 <style scoped>
+  .image-contain{
+    position: relative;
+  }
   img{
     width: 100%;
   }

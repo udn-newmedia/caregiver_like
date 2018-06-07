@@ -1,7 +1,11 @@
 <template>
   <div id="app">
     <Indicator></Indicator>
-    <Headbar MenuSlideFrom='right'></Headbar>
+    <Headbar MenuSlideFrom='right'>
+      <a href="./wung.html">汪建民</a>
+      <a href="./pong.html">澎恰恰</a>      
+      <a href="./lee.html">李明玉</a>
+    </Headbar>
     <Typing></Typing>
     <Cover :bg='img.CoverBg' :bgweb='img.CoverBg_pc' :useArrow="false">
       <img class="warm" :src="srcRWD(img.warm_1, img.warm_1_pc)" style="z-index: 10;">
@@ -10,8 +14,8 @@
       <img class="warm" :src="srcRWD(img.warm_4, null)" style="animation-delay: 999ms">
       <h1 class="TheTitle">照顧者最不想聽的一句話</h1>
     </Cover>
-    <Content :background-color="srcRWD(mobBgColor, pcBgColor)" :color="srcRWD(mobFontColor, pcFontColor)">
-      <Share href="http://nmdap.udn.com.tw/orange-project/"></Share>
+    <Content background-color="#fff">
+      <Share href="https://udn.com/upf/newmedia/2018_data/caregiver_like/index.html"></Share>
       <p><br></p>
       <p>「把父母送到安養院就是不孝？」長久以來，台灣的照顧者陷於孝順就是「親力親為」的傳統照顧迷思，再加上擔心周遭親友的閒言閒語，讓照顧者的負擔更沉重。</p>
       <p><br></p>
@@ -28,15 +32,16 @@
       <Vote></Vote>
     </Content>
     <Typing_2></Typing_2>
-    <Cover :bg="img.coverWung" :bgweb="img.coverWung_pc" :useArrow="false" menu-text="汪建民">
-      <div class="customTitleContain">
-        <div class="customTitle">
-          <h3>最討厭別人提供我偏方，說媽媽吃這個一定會好。</h3>
-          <p><b>——汪建民</b></p>
+    <Content background-color="#fff">
+      <ColumnOne :img1="img.coverWung" :imgweb1="img.coverWung_pc">
+        <div class="customTitleContain">
+          <div class="customTitle">
+            <h3>最討厭別人提供我偏方，說媽媽吃這個一定會好。</h3>
+            <p><b>——汪建民</b></p>
+          </div>
         </div>
-      </div>
-    </Cover>
-    <Content :background-color="srcRWD(mobBgColor, pcBgColor)" :color="srcRWD(mobFontColor, pcFontColor)">
+      </ColumnOne>
+      <p><br></p>
       <p>媽媽兩年半前因為中風住院，當時的看護阿姨發現，媽媽無法控制自己的大小便，好幾次尿布濕了都不自知，一檢查，確診是輕度失智。媽媽二次住院40多天，我要拍戲，照顧的重擔幾乎都落在妹妹身上。出院後怎麼辦？我們討論了兩個小時，認為只有一條路，把媽媽送到安養機構。</p>
       <p><br></p>
       <p>發病後短短一年，溫柔賢淑的媽媽變得暴躁、髒話連篇，曾看著我對安養中心的人說：「我弟弟來看我了！」還有一次，媽媽像是中邪一樣盯著我，眼神好可怕，甚至像殺人犯。我忍不住懷疑，這真是我媽媽？她到底是誰？被媽媽忘記這件事，我沒有準備，但每天都在接受。</p>
@@ -46,16 +51,17 @@
       <div class="moreWrapper">
         <a href="./wung.html" class="readArticle">閱讀全文</a>
       </div>
-    </Content>
-    <Cover :bg="img.coverPong" :bgweb="img.coverPong_pc" :useArrow="false" menu-text="澎恰恰">
-      <div class="customTitleContain">
-        <div class="customTitle">
-          <h3>最怕聽到我哥說，你怎麼不常回來看媽媽？</h3>
-          <p><b>——澎恰恰</b></p>
-        </div>
-      </div>
-    </Cover>
-    <Content :background-color="srcRWD(mobBgColor, pcBgColor)" :color="srcRWD(mobFontColor, pcFontColor)">
+      <p><br></p>
+      <p><br></p>
+      <ColumnOne :img1="img.coverPong" :imgweb1="img.coverPong_pc">
+        <div class="customTitleContain">
+          <div class="customTitle">
+            <h3>最怕聽到我哥說，你怎麼不常回來看媽媽？</h3>
+            <p><b>——澎恰恰</b></p>
+          </div>
+        </div>      
+      </ColumnOne>
+      <p><br></p>
       <p>面雜看不花的是天，現加自一快的變能同的夫體政求門致：也微不心常如他公史言技日說西精黨他失……家風家公心他文流銀課？即灣公醫明，入外答力件口老海分。著走經果適。會了聲們的排機真出建與起。入了美是，葉想把錢。</p>
       <p><br></p>
       <p>量配什現滿物後超。度結道就自畫民力。力原常十，生戲種來該行為文什，術能身金書！決到但舞黨他，要黃許這，再存成人他？突它國可！同石不師大；建命如為量舉起反長等在食早所演下質活體負成。是一應兒怕生去行思照不或話人，種熱考型。</p>
@@ -69,16 +75,17 @@
       <div class="moreWrapper">
         <a href="./pong.html" class="readArticle">閱讀全文</a>
       </div>
-    </Content>
-    <Cover :bg="img.coverLee" :bgweb="img.coverLee_pc" :useArrow="false" menu-text="李明玉">
-      <div class="customTitleContain">
-        <div class="customTitle">
-          <h3>生朋便縣的投展海象</h3>
-          <p><b>——李明玉</b></p>
-        </div>
-      </div>
-    </Cover>
-    <Content :background-color="srcRWD(mobBgColor, pcBgColor)" :color="srcRWD(mobFontColor, pcFontColor)">
+      <p><br></p>
+      <p><br></p>
+      <ColumnOne :img1="img.coverLee" :imgweb1="img.coverLee_pc">
+        <div class="customTitleContain">
+          <div class="customTitle">
+            <h3>生朋便縣的投展海象</h3>
+            <p><b>——李明玉</b></p>
+          </div>
+        </div>      
+      </ColumnOne>
+      <p><br></p>
       <p>消了度時境市！面人開，下學升業所禮的國團人年外林人費：的上快？技達落球似到火非然小電長帶能同……畫社子者人應此，會兒電深上立方內，可風在傷大生？種照難開，年在醫正看自調雨電實灣教。</p>
       <p><br></p>
       <p>花間此下一隨去非人，要一球共來作顯表未查或的情人接知好中她，受人的家防裡面心點日一文像就標我得中今具上司無的新。國集全開內目式世沒在的下難心兒面速。種臺手裡師人樂金：教接是著中我……人內來父下無度。意的燈親過始策家看天育。方什度工推再不相新生木書黃造但能動、條被車長老下下覺感：的唱我作者再小上中緊。德四這找的上臺加部，出指科，件童石結園只散合一候事任，消牛開物數市過客響。根招沒；苦要畫步生、倒公同著早有開認工非，麼小快運！</p>
@@ -89,14 +96,14 @@
         <a href="./lee.html" class="readArticle">閱讀全文</a>
       </div>
     </Content>
-    <SectionFixedBg :bg="img.coverSection" :bgweb="img.coverSection_pc" text="你可以對照顧者這麼說" menu-text="可以這麼說"></SectionFixedBg>
-    <Content :background-color="srcRWD(mobBgColor, pcBgColor)" :color="srcRWD(mobFontColor, pcFontColor)">
+    <SectionFixedBg :bg="img.coverSection" :bgweb="img.coverSection_pc" text="你可以對照顧者這麼說"></SectionFixedBg>
+    <Content background-color="#fff">
       <p>只要家人一句貼心、正面的話語，就可以給予照顧者憂鬱無助的心情很大的力量和幫助！專家建議你可以常說以下幾句話。</p>
       <p><br></p>
       <TalkSection></TalkSection>
     </Content>
     <Content background-color="#fff">
-      <Share href="http://nmdap.udn.com.tw/orange-project/"></Share>
+      <Share href="https://udn.com/upf/newmedia/2018_data/caregiver_like/index.html"></Share>
       <Logo>
         <div class="logo">
           <a href="https://vision.udn.com/" target="_blank"><img src="https://udn.com/upf/newmedia/img/logo_udnhope2.jpg"></a>
@@ -120,13 +127,15 @@
         href3="https://p.udn.com.tw/upf/newmedia/2016_data/20161003_quicksand_middle_age/index.html" img3="./static/web/bg_wang.jpg" text3="兒少發展帳戶推動3個月 申請率25%"
         href4="https://p.udn.com.tw/upf/newmedia/2016_data/20161003_quicksand_middle_age/index.html" img4="./static/web/bg_wang.jpg" text4="流沙中年 棄6萬月新顧爸媽，我在貧窮線下度日"
       ></Relate>
-      <FbComment href="http://nmdap.udn.com.tw/orange-project/"></FbComment>
+      <p><br></p>
+      <FbComment href="https://udn.com/upf/newmedia/2018_data/caregiver_like/index.html"></FbComment>
     </Content>
     <Foot background-color="#FFFFFF"></Foot>
   </div>
 </template>
 
 <script>
+import ColumnOne from './components/ColumnOne'
 import Content from './components/Content'
 import Cover from './components/Cover'
 import Editor from './components/Editor'
@@ -158,14 +167,14 @@ import imgWarm_1_pc from './assets/warmfinger/pc/warm_1_pc.png'
 import imgWarm_2_pc from './assets/warmfinger/pc/warm_2_pc.png'
 import imgWarm_3_pc from './assets/warmfinger/pc/warm_3_pc.png'
 
-import imgCoverWung from './assets/page_wung/bgwang_m.jpg'
-import imgCoverWung_pc from './assets/page_wung/pc/coverWung.jpg'
+import imgCoverWung from './assets/peo01_m.jpg'
+import imgCoverWung_pc from './assets/w001_web.jpg'
 
-import imgCoverPong from './assets/page_pong/bgp_m.jpg'
-import imgCoverPong_pc from './assets/page_pong/pc/p2bg.jpg'
+import imgCoverPong from './assets/peo02_m.jpg'
+import imgCoverPong_pc from './assets/w002_web.jpg'
 
-import imgCoverLee from './assets/page_lee/bglee_m.jpg'
-import imgCoverLee_pc from './assets/page_lee/pc/p4bg.jpg'
+import imgCoverLee from './assets/peo04_m.jpg'
+import imgCoverLee_pc from './assets/w004_web.jpg'
 
 import imgCoverSection from './assets/tocare.jpg'
 import imgCoverSeciton_pc from './assets/tocare_pc.jpg'
@@ -175,6 +184,7 @@ export default {
   components: {
     Content,
     Cover,
+    ColumnOne,
     Editor,
     Foot,
     FbComment,
@@ -192,6 +202,7 @@ export default {
   },
   data() {
     return {
+      tempWidth: null,
       img: {
         CoverBg: imgCoverBg,
         CoverBg_pc: imgCoverBg_pc,
@@ -211,11 +222,24 @@ export default {
         coverSection: imgCoverSection,
         coverSection_pc: imgCoverSeciton_pc
       },
-      mobBgColor: '#7e6b5a',
+      mobBgColor: '#e5e5e5',
       pcBgColor: '#fff',
-      mobFontColor: '#fff',
+      mobFontColor: '#000',
       pcFontColor: '#000'
     }
+  },
+  created: function() {
+    window.addEventListener('resize', () => {
+      if(window.innerWidth !== this.tempWidth){
+        this.tempWidth = window.innerWidth
+        this.$forceUpdate()
+      }
+    })
+  },
+  mounted () {
+    this.$nextTick(()=>{
+      this.tempWidth = window.innerWidth
+    })
   },
 }
 </script>
@@ -229,11 +253,16 @@ export default {
   word-wrap: break-word;
   text-align: justify;
   height: 100vh;
+  padding-top: 46px;
+  @media screen and (min-width: 1024px) {
+    padding-top: 50px;
+  }
 }
 .TheTitle{
   position: absolute;
   left: 0;
   bottom: 8vh;
+  color: #fff;
   width: 100%;
   z-index: 100;
   padding: 0 15px;
@@ -244,7 +273,7 @@ export default {
 }
 .warm{
   position: absolute;
-  top: -20px;
+  top: -10vh;
   left: 0;
   z-index: auto;
   width: 100%;
@@ -259,15 +288,17 @@ export default {
   width: 100%;
   bottom: 25px;
   padding: 0 25px;
+  color: #000;
   @media screen and (min-width: 1024px) {
-    width: 1000px;
-    bottom: 10vh;
+    width: 90%;
+    left: 5%;
+    bottom: 5%;
   }
 }
 .customTitle{
   position: relative;
   width: 100%;
-  background: rgba(#fff, .6);
+  background: rgba(#fff, .77);
   padding: 15px 20px;
 }
 .moreWrapper{
@@ -278,8 +309,8 @@ export default {
 .readArticle{
   display: inline-block;
   padding: 5px 10px;
-  border: 2px solid #fff;
-  color: #fff;
+  border: 2px solid #000;
+  color: #000;
   text-align: center;
   font-weight: bold;
   text-decoration: none;

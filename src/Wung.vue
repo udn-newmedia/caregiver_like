@@ -3,18 +3,23 @@
     <Indicator></Indicator>
     <Headbar MenuSlideFrom='right'>
       <a href="./wung.html"><b>汪建民</b></a>
-      <a href="./lee.html">李明玉</a>
       <a href="./pong.html">澎恰恰</a>
+      <a href="./lee.html">李明玉</a>
     </Headbar>
-    <Cover :bg="CoverImg" :bgweb="CoverImgPc"
-           position='bottom' title="汪建民照顧失智母親 " subtitle="最害怕妹妹說「我放棄了...」"></Cover>
+    <Cover :bg="CoverImg" :bgweb="CoverImgPc" fontColor="#444" style="background-position: center top;"
+           position='bottom' title="汪建民照顧失智母親 " subtitle="最害怕妹妹說「我放棄了...」" useArrow="true" arrowColor="#444"></Cover>
     <Content>
+      <p>「照顧是家事，很難對外人說。」50歲藝人汪建民近兩年鮮少現身在螢光幕前，很少人知道，他家中有一位高齡82歲、二度中風又失智的母親要照顧，近日他接受《聯合報系願景工程》專訪，首度對外談這兩年半來照顧母親的心路歷程。</p>
       <p><br></p>
-      <p>前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言。</p>
+      <p>「我最害怕的事，是妹妹跟我說：『哥，我放棄了…』」由於演員工作關係，汪建民經常到外地拍戲，一去就是兩三個月，他慶幸有妹妹幫忙分擔照顧責任。兄妹倆平時會用LINE聯繫，輪流去安養中心看媽媽、帶媽媽回診，因為有妹妹的貼心陪伴，才讓汪建民撐過這一段艱辛的照顧歲月。</p>
       <p><br></p>
-      <Share href="http://nmdap.udn.com.tw/orange-project/"></Share>
+      <Share href="https://udn.com/upf/newmedia/2018_data/caregiver_like/wung.html"></Share>
       <p><br></p>
       <Youtube src="https://www.youtube.com/embed/uauzw00I0wY"></Youtube>
+      <p><br></p>
+      <p>以下為採訪內容摘要：</p>
+      <p><br></p>
+      <p>兩年半前，媽媽在家裡中風被妹妹發現，她這一倒下，開始了我和妹妹這場照顧馬拉松。</p>
       <p><br></p>
       <h3>罹癌、中風、失智 接踵而來</h3>
       <p><br></p>
@@ -30,13 +35,13 @@
       <p><br></p>
       <h3>感謝妹妹 「沒有她我會死」</h3>
       <p><br></p>
-      <p>為了一周能去探視媽媽3、4天，我離開繁華的東區，暫時搬到靠近安養機構的新店。但其實這兩年半來，我最感謝的人是我妹妹，因為如果沒有她，「我應該會死。」</p>
+      <p>為了一周能去探視媽媽3、4天，我離開繁華的東區，暫時搬到靠近安養機構的新店。<b>但其實這兩年半來，我最感謝的人是我妹妹，因為如果沒有她，「我應該會死。」</b></p>
       <p><br></p>
       <p>妹妹也有工作，但時間比較彈性，她每天定時探視媽媽，看看媽媽有沒有需要什麼，幫媽媽買食物、水果、衣服，還幫忙換尿布。媽媽只要一有狀況，安養機構都會先通知妹妹。</p>
       <p><br></p>
       <p>我從來沒有當面對妹妹表達過感謝，現在對著你們的鏡頭，我要跟妹妹說，「謝謝！」雖然她可能會罵「你有病喔！」因為有妹妹，我才能去工作拍戲。</p>
       <p><br></p>
-      <p>媽媽極度重男輕女，妹妹照顧媽媽常被嫌，她時常受不了抱怨「你媽又怎樣了…」，但至始至終她都願意照顧媽媽，讓我很感激。我最怕妹妹說：「我不幹了」，也怕安養中心說：「你媽媽我們照顧不了。」</p>
+      <p>媽媽極度重男輕女，妹妹照顧媽媽常被嫌，她時常受不了抱怨「你媽又怎樣了…」，但至始至終她都願意照顧媽媽，讓我很感激。<b>我最怕妹妹說：「我不幹了」，也怕安養中心說：「你媽媽我們照顧不了。」</b></p>
       <p><br></p>
       <Quote text="“有一陣子，我和妹妹看到對方來電，都會看著手機發呆，猶豫要不要接。”" :color="QuoteColor"></Quote>
       <p><br></p>
@@ -44,7 +49,7 @@
       <p><br></p>
       <h3>媽媽變了 「眼神像殺人犯」</h3>
       <p><br></p>
-      <p>發病後短短一年，溫柔賢淑的媽媽變得暴躁、髒話連篇，曾看著我對安養中心的人說：「我弟弟來看我了！」還有一次，媽媽像是中邪，雙眼上吊，死盯著我，眼神好可怕，甚至像殺人犯。我忍不住懷疑，這真是我媽媽？她到底是誰？</p>
+      <p><b>發病後短短一年，溫柔賢淑的媽媽變得暴躁、髒話連篇，曾看著我對安養中心的人說：「我弟弟來看我了！」</b>還有一次，媽媽像是中邪，雙眼上吊，死盯著我，眼神好可怕，甚至像殺人犯。我忍不住懷疑，這真是我媽媽？她到底是誰？</p>
       <p><br></p>
       <Quote text="“被媽媽忘記這件事，我沒有準備，但每天都在接受。”" :color="QuoteColor"></Quote>
       <p><br></p>
@@ -52,7 +57,7 @@
       <p><br></p>
       <h3>不信偏方 「聽醫生的就好」</h3>
       <p><br></p>
-      <p>我最不喜歡的事，是9年前媽媽治療癌症，一堆朋友提供偏方，還有人告訴我去香港求兩隻金錢龜，媽媽一定會好，真的是夠了。家人已經生病了，沒必要再去受其他的苦，相信醫師就好。</p>
+      <p><b>我最不喜歡的事，是9年前媽媽治療癌症，一堆朋友提供偏方，還有人告訴我去香港求兩隻金錢龜，媽媽一定會好，真的是夠了。</b>家人已經生病了，沒必要再去受其他的苦，相信醫師就好。</p>
       <p><br></p>
       <p>媽媽住進安養機構兩年多，我和妹妹兩人常常就在會客室看著外頭「發呆」，每個家庭都不同，照顧模式無法全面複製，但應該要找到屬於自己的方式，找尋出口，怎麼照顧？「做就對了」，不用一直想，反而會成為照顧路上的負擔。</p>
       <p><br></p>
@@ -64,18 +69,18 @@
         <hr>
         <p><b>被照顧者病史：</b></p>
         <p>2009年 淋巴癌</p>
-        <p>2014年 中風</p>
-        <p>2015年 失智</p>
+        <p>2015年 第一次中風</p>
+        <p>2017年 第二次中風、失智</p>
         <hr>
         <p><b>照顧方式：</b>安養機構</p>
         <p><b>使用長照2.0資源：</b>未使用</p>
         <p><b>主要照顧者：</b>妹妹</p>
-        <p><b>最害怕聽到一句話：</b>「哥，我不幹了。」</p>
+        <p><b>最害怕聽到一句話：</b>「哥，我走不下去了。」</p>
         <p><b>給照顧者的一句話：</b>「每個家庭不同，照顧模式無法複製，應該要找到屬於自己的方式。」</p>
       </CareProfile>
-    </Content>
-    <Content background-color="#fff">
-      <Share href="http://nmdap.udn.com.tw/orange-project/"></Share>
+      <p><br></p>
+      <p><br></p>
+      <Share href="https://udn.com/upf/newmedia/2018_data/caregiver_like/wung.html"></Share>
       <Logo>
         <div class="logo">
           <a href="https://vision.udn.com/" target="_blank"><img src="https://udn.com/upf/newmedia/img/logo_udnhope2.jpg"></a>
@@ -83,11 +88,12 @@
       </Logo>
       <p><br></p>
       <Editor>
-        <div>文字：林秀姿、蔡佩蓉、劉嘉韻、鄧桂芬</div>
-        <div>影音、視覺設計：許瑋琳、蘇士堯</div>
-        <div>攝影：黃仲裕、林俊良、胡經周</div>
+        <div>文字：陳雨鑫、吳貞瑩</div>
+        <div>影音：王彥鈞、蔡佩蓉、蘇士堯</div>
+        <div>攝影：杜建重</div>
+        <div>視覺設計：蘇士堯</div>
         <div>網頁製作：廖克樸</div>
-        <div>議題行銷：張乃文、蔡嘉棋、盧巧梅</div>
+        <div>2018.06.</div>
       </Editor>
       <p><br></p>
       <Relate
@@ -97,7 +103,8 @@
         href3="https://p.udn.com.tw/upf/newmedia/2016_data/20161003_quicksand_middle_age/index.html" img3="./static/web/bg_wang.jpg" text3="兒少發展帳戶推動3個月 申請率25%"
         href4="https://p.udn.com.tw/upf/newmedia/2016_data/20161003_quicksand_middle_age/index.html" img4="./static/web/bg_wang.jpg" text4="流沙中年 棄6萬月新顧爸媽，我在貧窮線下度日"
       ></Relate>
-      <FbComment href="http://nmdap.udn.com.tw/orange-project/"></FbComment>
+      <p><br></p>
+      <FbComment href="https://udn.com/upf/newmedia/2018_data/caregiver_like/wung.html"></FbComment>
     </Content>
     <Foot background-color="#FFFFFF"></Foot>
   </div>
@@ -173,6 +180,10 @@ export default {
   word-wrap: break-word;
   text-align: justify;
   height: 100vh;
+  padding-top: 46px;
+  @media screen and (min-width: 1024px) {
+    padding-top: 50px;
+  }    
 }
 .cusColumn{
   @media screen and (min-width: 1024px) {

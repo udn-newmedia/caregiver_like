@@ -65,6 +65,7 @@
     text-align: left;
     margin: 0;
     width: 100%;
+    color: #030303;
   }
   @media screen and (min-width: 1024px) {
     display: flex;

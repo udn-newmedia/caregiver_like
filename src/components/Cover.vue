@@ -1,8 +1,8 @@
 <template>
     <div :id="menuText" class="cover" :style="{backgroundImage: 'url(' + bgRWD() + ')'}" :class="{top: top, bottom: bottom, aligncenter: aligncenter}">
         <div id="title-contain">
-            <h1>{{title}}</h1>
-            <div id="sub-title">{{subtitle}}</div>
+            <h1 :style="{color: fontColor}">{{title}}</h1>
+            <div id="sub-title" :style="{color: fontColor}">{{subtitle}}</div>
         </div>
         <slot class="slotContainer"></slot>
         <Arrow v-if="useArrow" :color='arrowColor' :hint='hint' :hintColor='hintColor'/>
@@ -16,7 +16,7 @@ import Bus from '../eventBus.js'
 
 export default {
     name: 'Cover',
-    props: ['title', 'subtitle', 'bg', 'bgweb', "position", "arrowColor", "hint", "hintColor", 'useArrow', 'menuText'],
+    props: ['title', 'subtitle', 'bg', 'bgweb', "position", "arrowColor", "hint", "hintColor", 'useArrow', 'menuText', 'fontColor'],
     data: function(){
         return{
             aligncenter: false,
@@ -68,7 +68,9 @@ export default {
 
 <style lang="scss" scoped>
     #title-contain{
+        width: 100%;
         padding: 20px;
+        color: #fff;
     }
     .cover{
       position: relative;
@@ -103,15 +105,17 @@ export default {
         font-size: 55px;
         font-weight: bold;
         letter-spacing: -1px;
-        color: #FFFFFF;
+        color: #fff;
         line-height: 1.1;
-        text-shadow: 0 0px 18px rgba(48,48,48,1);
+        // text-shadow: 0 0px 18px rgba(48,48,48,1);
+        // text-shadow: 4px 4px 10px rgba(0,0,0,.6);
         margin: 0;
     }
     #sub-title{
         font-size: 55px;
-        text-shadow: 0 0px 9px rgba(48,48,48,1);
-        color: #FFFFFF;
+        // text-shadow: 4px 4px 10px rgba(0,0,0,.6);
+        // text-shadow: 0 0px 9px rgba(48,48,48,1);
+        color: #fff;
     }
 
     @media screen and (max-width: 767px) {

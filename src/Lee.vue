@@ -3,18 +3,26 @@
     <Indicator></Indicator>
     <Headbar MenuSlideFrom='right'>
       <a href="./wung.html">汪建民</a>
-      <a href="./lee.html"><b>李明玉</b></a>
       <a href="./pong.html">澎恰恰</a>
+      <a href="./lee.html"><b>李明玉</b></a>
     </Headbar>
-    <Cover :bg="CoverImg" :bgweb="CoverImgPc"
-           title="照顧者血淚告白：" subtitle="失智老爸沒死，我哥卻累垮先走了..."
+    <Cover :bg="CoverImg" :bgweb="CoverImgPc" fontColor="#444" style="background-position: center top;"
+           class="cusTitlePos" title="照顧者血淚告白：" subtitle="失智老爸沒死，我哥卻累垮先走了" useArrow="true" arrowColor="#444"
            position='bottom'></Cover>
     <Content>
-      <p>前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言前言。</p>
+      <p>一人失智，拖垮全家，這是大學老師李明玉的真實人生故事。兩年多前，失智父親與鄰居發生衝突，鄰居一狀告上法院，讓全家從此陷入漫長的官司糾紛中，也讓一家人的生活陷入混亂。</p>
       <p><br></p>
-      <Share href="http://nmdap.udn.com.tw/orange-project/"></Share>
+      <p>最讓李明玉痛心的是，官司加上長期照顧壓力竟讓哥哥賠上人生，56歲壯年就離開人世......</p>
+      <p><br></p>
+      <Share href="https://udn.com/upf/newmedia/2018_data/caregiver_like/lee.html"></Share>
       <p><br></p>
       <Youtube src="https://www.youtube.com/embed/uauzw00I0wY"></Youtube>
+      <p><br></p>
+      <p>以下為採訪內容摘要：</p>
+      <p><br></p>
+      <p>2016年10月26日是我最心痛的日子。那天我哥和姪子在外頭吃完晚飯後，哥哥說要去挪車，他出去不久心肌梗塞，送到醫院急救無效， 「才五秒鐘他就離開我們了。」</p>
+      <p><br></p>
+      <p>哥哥走的時候才56歲。我常在想，<b>如果不是因為鄰居和失智的老爸打官司，官司加上照顧壓力，我哥不會這麼年輕就走了。</b></p>
       <p><br></p>
       <h3>失智徵兆 父親與鄰居爆衝突</h3>
       <p><br></p>
@@ -34,7 +42,7 @@
       <p><br></p>
       <Quote text="“我跟媽媽說：爸爸沒死，我們會先死。”" :color="QuoteColor"></Quote>
       <p><br></p>
-      <ColumnOne class="cusColumn" :img1="ColumnImg" :imgweb1="ColumnImgPc" imgsay="汪建民經常在中南部拍戲，由妹妹（後排左）扛起照顧失智母親（前）的重擔。"></ColumnOne>
+      <ColumnOne class="cusColumn" :img1="ColumnImg" :imgweb1="ColumnImgPc" imgsay="李明玉翻出父親的官司訴訟紀錄和哥哥的訃聞，說起傷心往事，忍不住悲從中來。"></ColumnOne>
       <p><br></p>
       <h3>聞子死訊 失智父淚流不止</h3>
       <p><br></p>
@@ -73,7 +81,7 @@
       </CareProfile>
     </Content>
     <Content background-color="#fff">
-      <Share href="http://nmdap.udn.com.tw/orange-project/"></Share>
+      <Share href="https://udn.com/upf/newmedia/2018_data/caregiver_like/lee.html"></Share>
       <Logo>
         <div class="logo">
           <a href="https://vision.udn.com/" target="_blank"><img src="https://udn.com/upf/newmedia/img/logo_udnhope2.jpg"></a>
@@ -86,7 +94,6 @@
         <div>攝影：黃義書</div>
         <div>視覺設計：蘇士堯</div>
         <div>網頁製作：廖克樸</div>
-        <div>議題行銷：張乃文、蔡嘉棋、盧巧梅</div>
         <div>2018.06.</div>
       </Editor>
       <p><br></p>
@@ -97,7 +104,8 @@
         href3="https://p.udn.com.tw/upf/newmedia/2016_data/20161003_quicksand_middle_age/index.html" img3="./static/web/bg_wang.jpg" text3="兒少發展帳戶推動3個月 申請率25%"
         href4="https://p.udn.com.tw/upf/newmedia/2016_data/20161003_quicksand_middle_age/index.html" img4="./static/web/bg_wang.jpg" text4="流沙中年 棄6萬月新顧爸媽，我在貧窮線下度日"
       ></Relate>
-      <FbComment href="http://nmdap.udn.com.tw/orange-project/"></FbComment>
+      <p><br></p>
+      <FbComment href="https://udn.com/upf/newmedia/2018_data/caregiver_like/lee.html"></FbComment>
     </Content>
     <Foot background-color="#FFFFFF"></Foot>
   </div>
@@ -129,8 +137,8 @@ import srcRWD from './mixin/srcRWD.js'
 import CoverImg from './assets/page_lee/bglee_m.jpg'
 import CoverImgPc from './assets/page_lee/pc/p4bg.jpg'
 
-import ColumnImg from './assets/page_wung/page_wang02.jpg'
-import ColumnImgPc from './assets/page_wung/pc/page_wung.jpg'
+import ColumnImg from './assets/page_lee/p401_m.jpg'
+import ColumnImgPc from './assets/page_lee/pc/p401.jpeg'
 
 export default {
   name: 'Wung',
@@ -173,10 +181,19 @@ export default {
   word-wrap: break-word;
   text-align: justify;
   height: 100vh;
+  padding-top: 46px;
+  @media screen and (min-width: 1024px) {
+    padding-top: 50px;
+  }  
 }
 .cusColumn{
   @media screen and (min-width: 1024px) {
     padding: 0 15%;
+  }
+}
+.cusTitlePos{
+  @media screen and (min-width: 1024px) {
+    padding-bottom: 3% !important;
   }
 }
 </style>

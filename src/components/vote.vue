@@ -1,14 +1,14 @@
 <template>
   <div class="vote">
-    <div class='words_section' v-for="(voted, index) in voteData" :key="voted.words">
-      <div class="head_section" v-show="showData" :style="{animationDelay: index*111 + 'ms'}">
+    <div class='words_section' v-for="(voted, index) in voteData" :key="voted.id">
+      <div class="head_section" v-show="showData" :style="{animationDelay: index*66 + 'ms'}">
         <div class="percent"><p>{{Math.round(countTemp[index], -2)}}</p><span class="perIcon">%</span></div>
         <div class="share_words" @click="handle_share(voted.words)">
           <i class="fa fa-share fa-1x" aria-hidden="true" style="display: inline-block;margin-right: 5px;"></i><span>分享</span>
         </div>
       </div>
-      <div class="content_section">
-        <div class="choose" @click="handle_vote(index)">{{voteBtn}}</div>
+      <div class="content_section" :style="{backgroundColor: voted.words === checkVote ? '#c0ae9a' : null}">
+        <div v-show="!showData" class="choose" @click="handle_vote(index)">{{voteBtn}}</div>
         <p>{{voted.words}}</p>
       </div>
     </div>
@@ -19,17 +19,20 @@
   import axios from 'axios'
   import URLSearchParams from 'url-search-params'
   import _once from 'lodash.once'
+  import Utils from 'udn-newmedia-utils'
 
   export default {
     name: 'Vote',
     data() {
       return {
         voteData: null,
+        tempData: null,
         showData: false,
         total: 0,
         countTemp: [0, 0, 0, 0, 0, 0, 0],
         SID: [null, null, null, null, null, null, null],
-        voteBtn: '選這句'
+        voteBtn: '選擇',
+        checkVote: ''
       }
     },
     computed: {
@@ -37,57 +40,72 @@
     },
     methods: {
       getData () {
-        // const url = 'http://localhost/vote_api/vote.php'
         const url = 'https://nmdap.udn.com.tw/caregiver_like/php/vote.php'
         axios.get(url)
           .then((res)=>{
             this.voteData = res.data
-            window.localStorage.setItem('Data', JSON.stringify(res.data));
           })
-      },
+      },   
       handle_share (word) {
+        const newWord = word.replace(/，|、|？|！/gi, '_').slice(0, -1)
         FB.ui({
           method: 'share',
-          href: 'https://udn.com/upf/newmedia/2018_data/_test/index.html',
-          hashtag: '#' + word,
+          href: 'https://udn.com/upf/newmedia/2018_data/caregiver_like/index.html',
+          hashtag: '#' + newWord
         })
       },
       handle_vote: _once(function(i) {
-        this.voteBtn = '選過了'
         this.handle_click(i);
+        this.checkVote = this.voteData[i].words
+        ga("send", {
+            "hitType": "event",
+            "eventCategory": "vote",
+            "eventAction": "click",
+            "eventLabel": "[" + Utils.detectPlatform() + "] [" + document.querySelector('title').innerHTML + "] [" + this.voteData[i].words + "]"
+        });
+        window.localStorage.setItem('checkVoted', this.voteData[i].words);
       }),
       handle_click (i) {
-        // const url = 'http://localhost/vote_api/vote.php'
-        if(this.showData === true) {
-          return
-        }
-        console.log('vote count')
         const url = 'https://nmdap.udn.com.tw/caregiver_like/php/vote.php'
         const params = new URLSearchParams();
         params.append('value', i+1);
         axios.post(url,params)
         .then((res) => {
-          this.showData = true
-          this.getData()
-          this.getTotal()
-          for(let i = 0; i < this.voteData.length; i++) {
-            this.countPercent(i)
-          }
+          res.data.sort((a, b) => {
+            if (a.tick > b.tick) {
+              return -1
+            } else if (a.tick < b.tick) {
+              return 1
+            } else {
+              return 0
+            }
+          })
+          return res.data
         })
+        .then((res)=>{
+          this.voteData = res
+          this.$forceUpdate()
+          window.localStorage.setItem('Data', JSON.stringify(res));
+        })
+        .then((res)=>{
+          this.$nextTick(()=>{
+            this.showData = true
+            for(let i = 0; i < 7; i++) {
+              this.countPercent(i)
+            } 
+          })             
+        })        
         .catch((err) => {
           console.log(err)
         })
       },
-      getTotal () {
-        let tempNum = 0;
-        for (let i = 0; i < this.voteData.length; i++) {
-          tempNum += this.voteData[i].tick
-        }
-        this.total = tempNum;
-      },
       countPercent (index) {
+        let tempNum = 0;
+        for (let i = 0; i < 7; i++) {
+          tempNum += this.voteData[i].tick
+        }         
         this.SID[index] = setInterval(() => {
-          const maxCount = Math.floor(this.voteData[index].tick / this.total * 100)
+          const maxCount = Math.floor(this.voteData[index].tick / tempNum * 100)
           if(this.countTemp[index] < maxCount){
             this.countTemp[index] += maxCount / 20
             this.$forceUpdate()
@@ -95,19 +113,28 @@
             const vm = this
             clearInterval(vm.SID[index])
           }
-        }, 111)
-      }
+        }, 88)
+      },
+      handle_scroll () {
+        let currentH = window.pageYOffset;
+        if (currentH > this.$el.offsetTop - window.innerHeight * 0.33 && currentH < this.$el.offsetTop + this.$el.clientHeight) {
+          this.handle_countPercent()
+        }
+      },
+      handle_countPercent: _once(function(){
+        if(this.showData === true) {
+          for(let i = 0; i < this.voteData.length; i++) {
+            this.countPercent(i)
+          }
+        }
+      })
     },
     created () {
       console.log('created')
-      if(localStorage.getItem('Data')) {
-        this.voteBtn = '選過了'
+      if(localStorage.getItem('Data') !== null) {
         this.showData = true
         this.voteData = JSON.parse(localStorage.getItem('Data'))
-        this.getTotal()
-        for(let i = 0; i < this.voteData.length; i++) {
-          this.countPercent(i)
-        }
+        this.checkVote = localStorage.getItem('checkVoted')
       } else {
         this.getData()
       }
@@ -116,10 +143,10 @@
 
     },
     mounted () {
-
-    },
+      window.addEventListener('scroll', this.handle_scroll) 
+    }, 
     updated () {
-
+      console.log('updated')
     }
   }
 </script>
@@ -128,12 +155,15 @@
 .vote{
   position: relative;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .words_section{
   width: 100%;
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
+  transition: order 1111ms ease-in-out;
 }
 .head_section{
   height: 50px;
@@ -177,9 +207,9 @@
   padding: 15px;
   p{
     margin: 0;
-    padding: 0 8px;
+    padding: 0;
     @media screen and (min-width: 1024px) {
-      padding: 0 20px;
+      padding: 0;
     }
   }
 }
@@ -193,6 +223,10 @@
   background-color: #a6937c;
   border-radius: 10px;
   color: #fff;
+  margin-right: 12px;
+  @media screen and (min-width: 1024px) {
+    margin-right: 20px;
+  }
   cursor: pointer;
 }
 @keyframes fadeIn {

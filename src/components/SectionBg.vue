@@ -1,8 +1,6 @@
 <template>
   <div style="height:100%;" :id="menuText">
-    <div class="section-bg" :style="{backgroundImage: 'url(' + bgRWD() + ')'}">
-
-    </div>
+    <div class="section-bg" :style="{backgroundImage: 'url(' + bgRWD() + ')'}"></div>
     <div class="img-say">{{imgsay}}</div>
   </div>
 </template>

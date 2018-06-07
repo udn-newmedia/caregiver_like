@@ -1,5 +1,5 @@
 <template>
-  <div class="typingCover">
+  <div :id="menuText" class="typingCover">
     <h1 class="typing">{{key}}<span v-show="keyflash" class="flash">❘</span></h1>
     <h1 class="typing">{{key_2}}<span v-show="keyflash_2" class="flash">❘</span></h1>
     <h1 class="typing">{{key_3}}<span v-show="keyflash_3" class="flash">❘</span></h1>
@@ -7,8 +7,10 @@
 </template>
 
 <script>
+  import Bus from '../eventBus.js'
   export default {
     name: 'Typing_2',
+    props: ['menuText'],
     data () {
       return {
         key: '',
@@ -61,12 +63,21 @@
           this.trigger = true
           this.handle_typeEffect()
         }
-      }
+      },
+      handle_Emit: function() {
+        const self = this
+        Bus.$emit('emitHeadbarTitle', {
+          title: self.menuText
+        })
+      },      
     },
     created () {
 
     },
     mounted () {
+      if(this.menuText !== undefined){
+        this.handle_Emit()
+      }
       window.addEventListener('scroll', this.handle_scroll)
     }
   }
