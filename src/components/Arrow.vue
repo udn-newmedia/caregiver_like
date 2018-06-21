@@ -1,7 +1,7 @@
 <template>
 	<div id="arrow" class="arrow" @click='nextPage'>
 		<span class="arrowHint" :style="{color: hintColor}" v-if='hint'>往下滑動</span>
-		<i class="fa fa-angle-down fa-3x arrowImg" aria-hidden="true" :style="{color: color}"></i>
+		<i class="fa fa-angle-down fa-2x arrowImg" aria-hidden="true" :style="{color: color}"></i>
 	</div>
 </template>
 
@@ -29,7 +29,7 @@ export default {
 		position: absolute;
 		z-index: 999;
 		left: 50%;
-		bottom: 25px;
+		bottom: 8px;
 		width: 100px;
 		margin-left: -50px;
 		display: flex;

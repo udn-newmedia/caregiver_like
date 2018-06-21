@@ -26,7 +26,7 @@
     },
     methods: {
       handle_typeEffect () {
-        const words = ['選', '選', '看', '！']
+        const words = ['照', '顧', '者', '心', '聲']
 
         this.keyInterval = window.setInterval(()=>{
           if(this.keyIndex < words.length){
@@ -44,7 +44,7 @@
         }, this.typeSpeed)
       },
       handle_typeEffect_2 () {
-        const words = ['哪', '一', '句', '話', '最', '容', '易', '惹', '毛', '照', '顧', '者', '？']
+        const words = ['我', '最', '不', '想', '聽', '到', '這', '些', '話']
         this.keyflash_2 = true
         this.keyInterval = window.setInterval(()=>{
           if(this.keyIndex < words.length){

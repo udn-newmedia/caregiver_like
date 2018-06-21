@@ -1,7 +1,7 @@
 <template>
     <header id="head-bar" :style="{top: top+'px',backgroundColor: setBackgroundColor}">
       <div id="icon">
-          <a href="#"><i class="udn-icon udn-icon-logo" :style="{color: setColor}"></i></a>
+          <a href="./index.html"><i class="udn-icon udn-icon-logo" :style="{color: setColor}"></i></a>
       </div>
       <div id="hbutton-contain" :class="{transformToNone: isOpen}" :style="{transform: menuSlideDirection, backgroundColor:setBackgroundColor}">
 	      <div class="scrollTo-Btn" v-for='title in getTitle' :style="{color: setColor, backgroundColor: setBackgroundColor}  "@click="handleScrollTo(title.title)">{{title.title}}</div>
@@ -185,6 +185,31 @@ export default {
             $(this).css('background-color', self.setLinkBackgroundColor)
         })
         window.addEventListener('scroll', this.handleScroll);
+        window.addEventListener('resize', ()=>{
+            if(window.innerWidth > 1024){
+                this.menuSlideDirection = 'translate(0, 0)'
+            }
+            else{
+                switch(this.MenuSlideFrom) {
+                    case 'top':
+                        this.menuSlideDirection = 'translate(0, -110%)';
+                        break;
+                    case 'bottom':
+                        this.menuSlideDirection = 'translate(0, 100%)';
+                        break;
+                    case 'left':
+                        this.menuSlideDirection = 'translate(-100%, 0)';
+                        break;
+                    case 'right':
+                        this.menuSlideDirection = 'translate(100%, 0)';
+                        break;
+                    default:
+                        this.menuSlideDirection = 'translate(0, -110%)';
+                        console.log("please set value is top, bottom, left or right")
+                        break;
+                }
+            }            
+        })
     },
 }
 </script>

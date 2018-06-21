@@ -3,7 +3,6 @@ const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
-require('promise-polyfill')
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
@@ -13,10 +12,10 @@ function resolve (dir) {
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    app: ['promise-polyfill', './src/main.js'],
-    wung: ['promise-polyfill', './src/wung.js'],
-    pong: ['promise-polyfill', './src/pong.js'],
-    lee: ['promise-polyfill', './src/lee.js']
+    app: ['babel-polyfill', './src/main.js'],
+    wung: ['babel-polyfill', './src/wung.js'],
+    pong: ['babel-polyfill', './src/pong.js'],
+    lee: ['babel-polyfill', './src/lee.js']
   },
   output: {
     path: config.build.assetsRoot,

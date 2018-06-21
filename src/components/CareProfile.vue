@@ -1,21 +1,22 @@
 <template>
   <div class="careProfile">
     <slot></slot>
+    <p><br></p>
   </div>
 </template>
 
 <script>
   export default {
-
+    
   }
 </script>
 
 <style lang="scss" scoped>
 .careProfile{
   background-color: #dcdcdc;
-  padding: 15px 10px;
+  padding: 15px 15px;
   @media screen and (min-width: 1024px) {
-    padding:  35px 15%;
+    padding:  10% 12.5%;
   }
 }
 hr{

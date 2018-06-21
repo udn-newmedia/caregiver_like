@@ -117,7 +117,6 @@ export default {
         // text-shadow: 0 0px 9px rgba(48,48,48,1);
         color: #fff;
     }
-
     @media screen and (max-width: 767px) {
         h1{
             font-size: 40px;

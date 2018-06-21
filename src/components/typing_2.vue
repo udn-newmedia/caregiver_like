@@ -45,7 +45,7 @@
         }, this.typeSpeed)
       },
       handle_typeEffect_2 () {
-        const words = ['我', '最', '不', '想', '聽', '到', '這', '句', '話']
+        const words = ['這', '種', '辛', '酸', '沒', '人', '能', '懂', '.', '.', '.']
         this.keyflash_2 = true
         this.keyInterval = window.setInterval(()=>{
           if(this.keyIndex < words.length){

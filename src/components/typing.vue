@@ -25,8 +25,7 @@
     },
     methods: {
       handle_typeEffect (target) {
-        const words = ['居', '然', '要', '送', '到', '安', '養', '中', '心', '，', '你', '是', '要', '拋', '棄', '父', '母', '嗎', '？',
-        ]
+        const words = ['你', '為', '什', '麼', '要', '把', '媽', '媽', '送', '進', '安', '養', '中', '心', '？']
         this.keyInterval = window.setInterval(()=>{
           if(this.keyIndex < words.length){
             this.key = this.key.concat(words[this.keyIndex]);
@@ -43,7 +42,8 @@
         }, this.typeSpeed)
       },
       handle_typeEffect_2 () {
-        const words = ['怎', '麼', '變', '成', '這', '樣', '？', '你', '是', '怎', '麼', '顧', '的', '？']
+        const vm = this;
+        const words = ['為', '什', '麼', '不', '幫', '你', '爸', '請', '個', '外', '勞', '？']
         this.keyflash_2 = true
         this.keyInterval = window.setInterval(()=>{
           if(this.keyIndex < words.length){
@@ -53,31 +53,36 @@
             window.clearInterval(this.keyInterval)
             this.keyIndex = 0
             setTimeout(()=>{
-              this.keyflash_2 = false
-              this.handle_typeEffect_3()
+              // this.keyflash_2 = false
+              // this.handle_typeEffect_3()
+              if(window.pageYOffset <= this.$el.clientHeight - window.innerHeight/3){
+                $('html, body').animate({
+                  scrollTop: vm.$el.clientHeight + 'px'
+                }, 1000)
+              }              
             }, this.typeDelay)
           }
         }, this.typeSpeed)
       },
-      handle_typeEffect_3 () {
-        const words = ['你', '又', '不', '用', '出', '去', '賺', '錢', '，', '在', '家', '照', '顧', '個', '病', '人', '是', '能', '多', '累', '？']
-        this.keyflash_3 = true
-        this.keyInterval = window.setInterval(()=>{
-          if(this.keyIndex < words.length){
-            this.key_3 = this.key_3.concat(words[this.keyIndex])
-            this.keyIndex ++
-          } else {
-            window.clearInterval(this.keyInterval)
-            setTimeout(()=>{
-              if(window.pageYOffset <= this.$el.clientHeight - window.innerHeight/3){
-                $('html, body').animate({
-                  scrollTop: window.innerHeight+'px'
-                }, 1000)
-              }
-            }, this.typeDelay)
-          }
-        }, this.typeSpeed)
-      }
+      // handle_typeEffect_3 () {
+      //   const words = []
+      //   this.keyflash_3 = true
+      //   this.keyInterval = window.setInterval(()=>{
+      //     if(this.keyIndex < words.length){
+      //       this.key_3 = this.key_3.concat(words[this.keyIndex])
+      //       this.keyIndex ++
+      //     } else {
+      //       window.clearInterval(this.keyInterval)
+      //       setTimeout(()=>{
+      //         if(window.pageYOffset <= this.$el.clientHeight - window.innerHeight/3){
+      //           $('html, body').animate({
+      //             scrollTop: window.innerHeight+'px'
+      //           }, 1000)
+      //         }
+      //       }, this.typeDelay)
+      //     }
+      //   }, this.typeSpeed)
+      // }
     },
     created () {
 

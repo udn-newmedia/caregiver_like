@@ -2,21 +2,25 @@
   <div id="app">
     <Indicator></Indicator>
     <Headbar MenuSlideFrom='right'>
-      <a href="./wung.html">汪建民</a>
-      <a href="./pong.html">澎恰恰</a>
-      <a href="./lee.html"><b>李明玉</b></a>
+      <a target='_blank' href="./index.html">別下照顧指導棋</a>
+      <a target='_blank' href="./wung.html">汪建民談長照苦</a>
+      <a target='_blank' href="./pong.html">澎恰恰憶失智母</a>      
+      <a target='_blank' href="./lee.html"><b>照顧者血淚告白</b></a>
+      <a target='_blank' href="https://ubrand.udn.com/ubrand/cate/11816">更多照顧者故事</a>
     </Headbar>
     <Cover :bg="CoverImg" :bgweb="CoverImgPc" fontColor="#444" style="background-position: center top;"
-           class="cusTitlePos" title="照顧者血淚告白：" subtitle="失智老爸沒死，我哥卻累垮先走了" useArrow="true" arrowColor="#444"
+           class="cusTitlePos" title="照顧者血淚告白：" subtitle="長期照顧失智父，我哥累垮先走了" useArrow="true" arrowColor="#444"
            position='bottom'></Cover>
     <Content>
+      <a target="_blank" href="https://vision.udn.com/" @click="handle_vision"><img src="../static/hope_logo.png" alt="願景工程" style="width: 200px"></a>
+      <p><br></p>
+      <Share href="https://udn.com/upf/newmedia/2018_data/family_caregiver/lee.html"></Share>
+      <p><br></p>
       <p>一人失智，拖垮全家，這是大學老師李明玉的真實人生故事。兩年多前，失智父親與鄰居發生衝突，鄰居一狀告上法院，讓全家從此陷入漫長的官司糾紛中，也讓一家人的生活陷入混亂。</p>
       <p><br></p>
-      <p>最讓李明玉痛心的是，官司加上長期照顧壓力竟讓哥哥賠上人生，56歲壯年就離開人世......</p>
+      <p>最讓李明玉痛心的是，官司加上長期照顧壓力竟讓哥哥賠上人生，56歲壯年就離開人世。</p>
       <p><br></p>
-      <Share href="https://udn.com/upf/newmedia/2018_data/caregiver_like/lee.html"></Share>
-      <p><br></p>
-      <Youtube src="https://www.youtube.com/embed/uauzw00I0wY"></Youtube>
+      <Youtube src="https://www.youtube.com/embed/F0niMbuREMM"></Youtube>
       <p><br></p>
       <p>以下為採訪內容摘要：</p>
       <p><br></p>
@@ -34,25 +38,25 @@
       <p><br></p>
       <h3>確診失智 官司糾紛全忘光</h3>
       <p><br></p>
-      <p>老爸只出庭那一次，之後就再也沒法子出庭，甚至不記得為什麼和鄰居起衝突，<b>本來還氣憤地和談論官司，後來連官司這回事都忘了。</b>但老爸在法庭暴走的模樣被檢察官認為是暴力，持續對他提起訴訟，我們只好一邊照顧老爸一邊繼續打官司。</p>
+      <p>老爸只出庭那一次，之後就再也沒法子出庭，甚至不記得為什麼和鄰居起衝突，<b>後來連官司這回事都忘了。</b>但老爸在法庭暴走的模樣被檢察官認為是暴力，持續對他提起訴訟，我們只好一邊照顧老爸，一邊繼續打官司。</p>
       <p><br></p>
       <p>老爸的狀況持續不好，我們也不知為什麼。2016年1月，我學校放寒假，妹妹將老爸送到台北由我照顧，她一路哭著上來，我去台北車站接老爸時，才發現他連路都走不動了。<b>我決定帶爸爸去看病，但一開始我連掛那一科都不知道，就眼科、耳科、心臟科等全都掛號，直到做了失智症篩檢，才確診罹患失智症。</b></p>
       <p><br></p>
       <p>老爸上台北三個月，此時我也開學了，無法兼顧照顧爸爸和教書，便帶爸爸回高雄。一開始，媽媽說要自己照顧，叫我們別花錢。但我已經被磨了三個月，知道老媽不可能獨立照顧老爸，堅決反對。</p>
       <p><br></p>
-      <Quote text="“我跟媽媽說：爸爸沒死，我們會先死。”" :color="QuoteColor"></Quote>
+      <Quote text="“我跟哥哥說：爸爸沒死，我們會先死。”" :color="QuoteColor"></Quote>
       <p><br></p>
       <ColumnOne class="cusColumn" :img1="ColumnImg" :imgweb1="ColumnImgPc" imgsay="李明玉翻出父親的官司訴訟紀錄和哥哥的訃聞，說起傷心往事，忍不住悲從中來。"></ColumnOne>
       <p><br></p>
-      <h3>聞子死訊 失智父淚流不止</h3>
+      <h3>聽到哥哥先走了 失智老爸一直哭</h3>
       <p><br></p>
-      <p>家裡四兄妹，大姊、哥哥、小妹和我，討論後決定送爸爸進安養機構。大姐和妹妹都沒有工作、哥哥的經濟狀況也普通，而我平常都在台北，所以<b>我一肩扛起照顧費用，每月至少3萬元，住院花費更多。住在台中的大姊60歲了，小妹家有高齡公婆需要照顧，爸爸和媽媽的主要照顧者就是我哥。</b></p>
+      <p>家裡四兄妹，大姊、哥哥、小妹和我，討論後決定送爸爸進安養機構。大姊和妹妹都沒有工作、哥哥的經濟狀況也普通，而我平常都在台北，所以<b>我一肩扛起照顧費用，每月至少3萬元，住院花費更多。住在台中的大姊60歲了，小妹家有高齡公婆需要照顧，爸爸和媽媽的主要照顧者就是我哥。</b></p>
       <p><br></p>
       <p>爸爸雖確診失智，官司仍持續，由我在台北寫狀紙，住高雄的哥哥出庭。那時哥哥和大嫂已分居了，他那年丟了工作，但悶在心裡沒說，我不知道他承擔的壓力這樣大。</p>
       <p><br></p>
       <p>接到哥哥突然走了的消息，我不敢置信，馬上南下回高雄處理後事。沒想到，久未見面的大嫂在哥哥過世後現身，因老家登記於哥哥名下，哥哥另有債務未還，大嫂希望賣房還債。但這是媽媽住了一輩子的老家，我和姊妹希望能讓媽媽住到百年，又和大嫂打起官司。</p>
       <p><br></p>
-      <p>爸爸則因病得太重，2017年1月法官決定終結審判。我們一直不知怎麼告訴老爸有關哥哥的死訊，後來鼓起勇氣和老爸說實話，<b>許多事情已經記不住的老爸一聽到哥哥先走了，像個無助的孩子一直哭一直哭，怎麼也停不住。</b></p>
+      <p>爸爸則因病得太重，2017年1月法官決定終結審判。我們一直不知怎麼告訴老爸有關哥哥的死訊，後來鼓起勇氣和老爸說實話，<b>老爸一聽到哥哥先走了，像個無助的孩子一直哭一直哭，怎麼也停不住。</b></p>
       <p><br></p>
       <h3>失智長輩 讓專業的人來照顧</h3>
       <p><br></p>
@@ -66,7 +70,7 @@
         <p>大學老師（56歲）</p>
         <p>被照顧者：爸爸（87歲）</p>
         <hr>
-        <p><b>被照顧者病史：</b></p>
+        <p><b>爸爸病史：</b></p>
         <p>2014年 開始出現失智症狀</p>
         <p>2016年3月 正式被診斷為失智症</p>
         <hr>
@@ -75,13 +79,15 @@
         <p>2016年9月至今 住在高雄市安養機構</p>
         <hr>
         <p><b>使用長照2.0資源：</b>未使用</p>
-        <p><b>主要照顧者：</b>兄照顧至2016年11月去世止，接下來由妹妹接替照顧工作，包括協助就醫、拿藥、送醫、每周少去2次安養機構探望老爸。</p>
+        <p><b>主要照顧者：</b>兄照顧至2016年11月去世止，接下來由妹妹接替照顧工作，包括協助就醫、拿藥、送醫、每周至少去2次安養機構探望老爸。</p>
         <p><b>最害怕聽到一句話：</b>「家人有人突然去世！」</p>
         <p><b>給照顧者的一句話：</b>「好好活著才能照顧老人，一起加油！」</p>
       </CareProfile>
-    </Content>
-    <Content background-color="#fff">
-      <Share href="https://udn.com/upf/newmedia/2018_data/caregiver_like/lee.html"></Share>
+      <p><br></p>
+      <a target="_blank" href="./index.html" @click="handle_banner"><ColumnOne :img1="Banner" :imgweb1="Banner_pc"></ColumnOne></a>
+      <p><br></p>
+      <p><br></p>
+      <Share href="https://udn.com/upf/newmedia/2018_data/family_caregiver/lee.html"></Share>
       <Logo>
         <div class="logo">
           <a href="https://vision.udn.com/" target="_blank"><img src="https://udn.com/upf/newmedia/img/logo_udnhope2.jpg"></a>
@@ -94,24 +100,25 @@
         <div>攝影：黃義書</div>
         <div>視覺設計：蘇士堯</div>
         <div>網頁製作：廖克樸</div>
-        <div>2018.06.</div>
+        <div>2018.06.24</div>
       </Editor>
       <p><br></p>
       <Relate
         title="延伸閱讀" color="#363434"
-        href1="https://p.udn.com.tw/upf/newmedia/2016_data/20161003_quicksand_middle_age/index.html" img1="./static/web/bg_wang.jpg" text1="我們長大，把光亮帶回黑暗家鄉"
-        href2="https://p.udn.com.tw/upf/newmedia/2016_data/20161003_quicksand_middle_age/index.html" img2="./static/web/bg_wang.jpg" text2="助脫貧…教技能 推存錢帳戶"
-        href3="https://p.udn.com.tw/upf/newmedia/2016_data/20161003_quicksand_middle_age/index.html" img3="./static/web/bg_wang.jpg" text3="兒少發展帳戶推動3個月 申請率25%"
-        href4="https://p.udn.com.tw/upf/newmedia/2016_data/20161003_quicksand_middle_age/index.html" img4="./static/web/bg_wang.jpg" text4="流沙中年 棄6萬月新顧爸媽，我在貧窮線下度日"
+        href1="https://ubrand.udn.com/ubrand/story/11816/3022230" :img1="Relate1" text1="照顧失能家人 不能只靠愛與責任"
+        href2="https://ubrand.udn.com/ubrand/story/11816/3022199" :img2="Relate2" text2="長照政策很陌生 照顧者恐變被照顧者"
+        href3="https://ubrand.udn.com/ubrand/story/11816/3022197" :img3="Relate3" text3="聰明照顧者 63歲的她長期「一打三」"
+        href4="https://udn.com/upf/newmedia/2017_data/caregiver/" :img4="Relate4" text4="致．照顧者／該急救，還是讓他走...照顧者的沉痛告白"
       ></Relate>
       <p><br></p>
-      <FbComment href="https://udn.com/upf/newmedia/2018_data/caregiver_like/lee.html"></FbComment>
+      <FbComment href="https://udn.com/upf/newmedia/2018_data/family_caregiver/lee.html"></FbComment>
     </Content>
     <Foot background-color="#FFFFFF"></Foot>
   </div>
 </template>
 
 <script>
+import Utils from 'udn-newmedia-utils'
 import Content from './components/Content'
 import Cover from './components/Cover'
 import ColumnOne from './components/ColumnOne'
@@ -140,6 +147,14 @@ import CoverImgPc from './assets/page_lee/pc/p4bg.jpg'
 import ColumnImg from './assets/page_lee/p401_m.jpg'
 import ColumnImgPc from './assets/page_lee/pc/p401.jpeg'
 
+import Banner from './assets/banner2_m.jpg'
+import Banner_pc from './assets/banner2.jpg'
+
+import Relate1 from './assets/relate/relate1.jpg'
+import Relate2 from './assets/relate/relate2.jpg'
+import Relate3 from './assets/relate/relate3.jpg'
+import Relate4 from './assets/relate/relate4.jpg'
+
 export default {
   name: 'Wung',
   mixins: [srcRWD],
@@ -162,13 +177,37 @@ export default {
   },
   data() {
     return {
+      Banner: Banner,
+      Banner_pc: Banner_pc,       
       CoverImg: CoverImg,
       CoverImgPc: CoverImgPc,
       ColumnImg: ColumnImg,
       ColumnImgPc: ColumnImgPc,
-      QuoteColor: '#a84200'
+      QuoteColor: '#a84200',
+      Relate1: Relate1,
+      Relate2: Relate2,
+      Relate3: Relate3,
+      Relate4: Relate4,      
     }
   },
+  methods: {
+    handle_banner () {
+      ga("send", {
+          "hitType": "event",
+          "eventCategory": "Banner",
+          "eventAction": "click",
+          "eventLabel": "[" + Utils.detectPlatform() + "] [" + document.querySelector('title').innerHTML + "] [ 點Banner ]"
+      });            
+    },
+    handle_vision () {
+      ga("send", {
+          "hitType": "event",
+          "eventCategory": "Banner",
+          "eventAction": "click",
+          "eventLabel": "[" + Utils.detectPlatform() + "] [" + document.querySelector('title').innerHTML + "] [ 點文首願景LOGO ]"
+      });      
+    }    
+  }
 }
 </script>
 

@@ -8,10 +8,12 @@
         </div>
       </div>
       <div class="content_section" :style="{backgroundColor: voted.words === checkVote ? '#c0ae9a' : null}">
-        <div v-show="!showData" class="choose" @click="handle_vote(index)">{{voteBtn}}</div>
+        <div v-if="!showData" class="choose" @click="handle_vote(index)">{{voteBtn}}</div>
         <p>{{voted.words}}</p>
       </div>
     </div>
+    <p><br></p>
+    <h3 v-if="showData">感謝你，你已經完成投票！</h3>
   </div>
 </template>
 
@@ -43,14 +45,33 @@
         const url = 'https://nmdap.udn.com.tw/caregiver_like/php/vote.php'
         axios.get(url)
           .then((res)=>{
-            this.voteData = res.data
+            if(localStorage.getItem('checkVoted') !== null) {
+              this.showData = true
+              this.checkVote = localStorage.getItem('checkVoted')
+              res.data.sort((a, b) => {
+                if (a.tick > b.tick) {
+                  return -1
+                } else if (a.tick < b.tick) {
+                  return 1
+                } else {
+                  return 0
+                }
+              })
+              this.voteData = res.data              
+            } else {
+              this.voteData = res.data
+            }           
+          })
+          .then((res)=>{
+            console.log('data setted')
+            window.addEventListener('scroll', this.handle_scroll) 
           })
       },   
       handle_share (word) {
         const newWord = word.replace(/，|、|？|！/gi, '_').slice(0, -1)
         FB.ui({
           method: 'share',
-          href: 'https://udn.com/upf/newmedia/2018_data/caregiver_like/index.html',
+          href: 'https://udn.com/upf/newmedia/2018_data/family_caregiver/index.html',
           hashtag: '#' + newWord
         })
       },
@@ -85,7 +106,6 @@
         .then((res)=>{
           this.voteData = res
           this.$forceUpdate()
-          window.localStorage.setItem('Data', JSON.stringify(res));
         })
         .then((res)=>{
           this.$nextTick(()=>{
@@ -117,8 +137,9 @@
       },
       handle_scroll () {
         let currentH = window.pageYOffset;
-        if (currentH > this.$el.offsetTop - window.innerHeight * 0.33 && currentH < this.$el.offsetTop + this.$el.clientHeight) {
+        if (currentH > this.$el.offsetTop - window.innerHeight * 0.33) {
           this.handle_countPercent()
+          window.removeEventListener('scroll', this.handle_scroll)
         }
       },
       handle_countPercent: _once(function(){
@@ -131,19 +152,13 @@
     },
     created () {
       console.log('created')
-      if(localStorage.getItem('Data') !== null) {
-        this.showData = true
-        this.voteData = JSON.parse(localStorage.getItem('Data'))
-        this.checkVote = localStorage.getItem('checkVoted')
-      } else {
-        this.getData()
-      }
+      this.getData()
     },
     beforeMount () {
 
     },
     mounted () {
-      window.addEventListener('scroll', this.handle_scroll) 
+      
     }, 
     updated () {
       console.log('updated')
@@ -178,8 +193,8 @@
   align-items: flex-end;
   font-size: 60px;
   p{
-    line-height: .8;
-    font-size: inherit;
+    line-height: .8 !important;
+    font-size: inherit !important;
     margin: 0;
   }
 }

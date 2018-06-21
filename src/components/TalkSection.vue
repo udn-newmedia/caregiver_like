@@ -1,8 +1,8 @@
 <template>
   <div class="talkSection">
-    <div class="talkBox" v-for="(word, index) in talk" :key="word" :class="{'letTransparent': canTrans(index)}">
-      <h3>{{word}}</h3>
-    </div>
+    <div class="talkBox" v-for="word in talk" :key="word">
+      <p>{{word}}</p>
+    </div> 
   </div>
 </template>
 
@@ -15,35 +15,17 @@
     data() {
       return {
         talk: [
-          '照顧是大家共同的責任，不需要把所有責任都攬在自己身上。',
-          '有任何需要我們幫忙的地方請儘管提出來，照顧的問題不是你一個人的事情！',
-          '盡力就好，不要責怪自己、要求自己太多。',
-          '不要因為放心不下病人而不敢出去，多出去走走參加喘息紓壓活動，或上一些專業照顧課程，可以紓解壓力。',
-          '謝謝你願意在家照顧生病的家人，因為有你的付出，大家得以繼續工作賺錢維持家計，你很重要，你要肯定自己的價值！',
-          '鼓勵照顧者的話鼓勵照顧者的話鼓勵照顧者的話鼓勵照顧者的話鼓勵照顧者的話鼓勵照顧者的話',
+          '你可以多出去走走透透氣，安排自己的生活，不要因為照顧過度犧牲自己。',
+          '有任何需要我們幫忙的地方請儘管提出來，照顧的問題不是你一個人的事情。',
+          '照顧是大家共同的責任，不要把所有責任都攬在自己身上。',
+          '照顧是難事，盡力就好，不要苛責自己。',
+          '自己的身體也要顧，我們愛你，希望你健康。',
+          '不要因為放心不下病人而不出門，休息充電後，也可以提升照顧效能。',
+          '謝謝你照顧生病的家人，你要肯定自己，你好棒！',
+          '照顧是一條漫長的路，可以多了解、多使用長照資源，讓這條路走得更輕鬆。'
         ]
       }
     },
-    methods: {
-      canTrans (i) {
-        if (window.innerWidth >= 1024) {
-          switch(i) {
-            case 1:
-              return true
-            break;
-            case 2:
-              return true
-            break;
-            case 5:
-              return true
-            break;
-            default:
-              return false
-            break;
-          }
-        }
-      }
-    }
   }
 </script>
 
@@ -56,28 +38,17 @@
   justify-content: center;
 }
 .talkBox{
+  position: relative;
   width: 100%;
-  background: #fff url('../assets/bgtexture50_50.jpg') repeat;
-  background-size: 100px 100px;
+  padding: 12px 25px;
+  border-radius: 22.5px;
+  display: flex;
+  align-items: center;
+  color: #030303;
+  background-color: #eee6d9;
   margin-bottom: 15px;
-  padding: 25px 20px;
-  h3{
-    text-align: left;
+  p{
     margin: 0;
-    width: 100%;
-    color: #030303;
   }
-  @media screen and (min-width: 1024px) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    height: 300px;
-    padding: 30px;
-    margin-bottom: 0;
-  }
-}
-.letTransparent{
-  background: transparent !important;
 }
 </style>
