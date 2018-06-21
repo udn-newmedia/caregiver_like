@@ -74,6 +74,12 @@
           href: 'https://udn.com/upf/newmedia/2018_data/family_caregiver/index.html',
           hashtag: '#' + newWord
         })
+        ga("send", {
+            "hitType": "event",
+            "eventCategory": "vote",
+            "eventAction": "click",
+            "eventLabel": "[" + Utils.detectPlatform() + "] [" + document.querySelector('title').innerHTML + "] [" + word + "] [FB分享投票]"
+        });      
       },
       handle_vote: _once(function(i) {
         this.handle_click(i);
@@ -82,7 +88,7 @@
             "hitType": "event",
             "eventCategory": "vote",
             "eventAction": "click",
-            "eventLabel": "[" + Utils.detectPlatform() + "] [" + document.querySelector('title').innerHTML + "] [" + this.voteData[i].words + "]"
+            "eventLabel": "[" + Utils.detectPlatform() + "] [" + document.querySelector('title').innerHTML + "] [" + this.voteData[i].words + "] [投票]"
         });
         window.localStorage.setItem('checkVoted', this.voteData[i].words);
       }),
