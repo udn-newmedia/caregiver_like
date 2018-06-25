@@ -34,7 +34,7 @@
       <p><br></p>
       <h3>回家盡孝 不是人人做得到</h3>
       <p><br></p>
-      <p>根據聯合報系願景工程與中華民國家庭照顧者總會進行「家庭照顧分工經驗調查」發現，<b>652位照顧者或曾經照顧家人的受訪者中，近半數不同意「照顧是孝順的表現，應由家人負責，不應委託外人」，但同意者也有38%。</b></p>
+      <p>根據聯合報系願景工程與中華民國家庭照顧者總會進行<a href="https://vision.udn.com/vision/story/12242/3216656" target="_blank">「家庭照顧分工經驗調查」</a>發現，<b>652位照顧者或曾經照顧家人的受訪者中，近半數不同意「照顧是孝順的表現，應由家人負責，不應委託外人」，但同意者也有38%。</b></p>
       <p><br></p>
       <p>「家人自己照顧」仍然是台灣長照現況的主流。如果天時、地利、人和，這當然是長輩的福氣，也是子女的幸運，能夠無憾伴老。但現實是，政府長照制度未能讓人在工作與照顧之間兼顧。高舉「孝道」大旗的道德譴責，讓照顧者壓力更大。</p>
       <p><br></p>
@@ -44,7 +44,7 @@
     </Content>
     <Typing_3></Typing_3>
     <Content background-color="#fff">
-      <p>家人衝突是家庭照顧最複雜難解的課題，根據「家庭照顧分工經驗調查」，約有28%的受訪者曾經「因為照顧問題與家人發生爭執」，其中以照顧方式想法不同、照顧費用分擔不均比例最高，許多照顧者因此遭受其他家人質疑、甚至是冷言冷語，讓照顧者內心「很受傷」。</p>
+      <p>家人衝突是家庭照顧最複雜難解的課題，根據<a href="https://vision.udn.com/vision/story/12242/3216656" target="_blank">「家庭照顧分工經驗調查」</a>，約有28%的受訪者曾經「因為照顧問題與家人發生爭執」，其中以照顧方式想法不同、照顧費用分擔不均比例最高，許多照顧者因此遭受其他家人質疑、甚至是冷言冷語，讓照顧者內心「很受傷」。</p>
       <p><br></p>
       <p><b>根據中華民國家庭照顧者總會調查，照顧者有7大困擾句，選選看，哪一句話讓你最有感呢？並同步看網友票選結果。</b></p>
       <p><br></p>
@@ -69,7 +69,7 @@
       <p><br></p>
       <p><b>這兩年半來，我最感謝的人是我妹妹，如果沒有她幫忙照顧媽媽，「我應該會死。」我最怕妹妹說：「我不幹了」</b>，也怕安養中心說：「你媽媽我們照顧不了。」其實一直到現在，我和妹妹看到對方來電，都會猶豫要不要接，擔心電話裡傳來自己無法承受的訊息。</p>
       <p><br></p>
-      <p><b>發病後短短一年，溫柔賢淑的媽媽變得暴躁、髒話連篇，曾看著我對安養中心的人說：「我弟弟來看我了！」</b>還有一次，媽媽像是中邪一樣盯著我，眼神好可怕，甚至像殺人犯。我忍不住懷疑，這真是我媽媽？她到底是誰？</p>
+      <p>發病後短短一年，溫柔賢淑的媽媽變得暴躁、髒話連篇，曾看著我對安養中心的人說：「我弟弟來看我了！」還有一次，媽媽像是中邪一樣盯著我，眼神好可怕，甚至有殺意。我忍不住懷疑，這真是我媽媽？她到底是誰？</p>
       <p><br></p>
       <div class="moreWrapper" @click="handle_readMore('汪建民')">
         <a target="_blank" href="./wung.html" class="readArticle">閱讀全文</a>
@@ -107,7 +107,7 @@
         </div>      
       </ColumnOne>
       <p><br></p>
-      <p>2016年10月26日是我最心痛的日子，我哥突然心肌梗塞發作，「才五秒鐘他就離開我們了。」<b>哥哥走的時候才56歲。我常在想，如果不是因為鄰居和失智的老爸打官司，官司加上照顧壓力，我哥不會這麼年輕就走了。</b></p>
+      <p>2016年11月26日是我最心痛的日子，我哥突然心肌梗塞發作，「才五秒鐘他就離開我們了。」<b>哥哥走的時候才56歲。我常在想，如果不是因為鄰居和失智的老爸打官司，官司加上照顧壓力，我哥不會這麼年輕就走了。</b></p>
       <p><br></p>
       <p>2015年10月，我爸因高雄老家巷子的停車問題，和30多年的老鄰居起衝突，對方把我爸推倒受傷，年輕時當過獵人的老爸也情緒激動，衝回家拿出柴刀，當時全家人還不知爸爸失智。後來鄰居一狀告上法院，從此全家陷入漫長的官司糾紛。</p>
       <p><br></p>
@@ -131,6 +131,8 @@
       <p><br></p>
       <p><br></p>
       <Break></Break>
+      <p><br></p>
+      <a target="_blank" href="https://vision.udn.com/vision/cate/7627" @click="handle_Banner"><ColumnOne :img1="img.Banner_3" :imgweb1="img.Banner_3_pc"></ColumnOne></a>      
       <p><br></p>
       <a target="_blank" href="https://ubrand.udn.com/ubrand/cate/11816" @click="handle_Banner"><ColumnOne :img1="img.Banner_1" :imgweb1="img.Banner_1_pc"></ColumnOne></a>
       <p><br></p>
@@ -219,6 +221,8 @@ import imgCoverSeciton_pc from './assets/tocare_pc.jpg'
 
 import Banner_1 from './assets/banner1_m.jpg'
 import Banner_1_pc from './assets/banner1.jpg'
+import Banner_3 from './assets/banner3_m.jpg'
+import Banner_3_pc from './assets/banner3.jpg'
 
 import Relate1 from './assets/relate/relate1.jpg'
 import Relate2 from './assets/relate/relate2.jpg'
@@ -258,7 +262,9 @@ export default {
       Relate4: Relate4,      
       img: {
         Banner_1: Banner_1,
-        Banner_1_pc: Banner_1_pc,    
+        Banner_1_pc: Banner_1_pc,   
+        Banner_3: Banner_3,
+        Banner_3_pc: Banner_3_pc,            
         CoverBg: imgCoverBg,
         CoverBg_pc: imgCoverBg_pc,
         warm_1: imgWarm_1,
